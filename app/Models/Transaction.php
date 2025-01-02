@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 class Transaction extends Model
 {
@@ -30,6 +31,17 @@ class Transaction extends Model
     ];
 
     /**
+     * Cast attributes to specific data types.
+     */
+    protected $casts = [
+        'received_at' => 'datetime',
+        'estimated_finish_at' => 'datetime',
+        'finished_at' => 'datetime',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
+
+    /**
      * Relasi ke model Customer.
      */
     public function customer()
@@ -44,9 +56,12 @@ class Transaction extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
-    public function voucher()
-{
-    return $this->belongsTo(Voucher::class, 'voucher_id', 'voucher_id');
-}
 
+    /**
+     * Relasi ke model Voucher.
+     */
+    public function voucher()
+    {
+        return $this->belongsTo(Voucher::class, 'voucher_id', 'voucher_id');
+    }
 }

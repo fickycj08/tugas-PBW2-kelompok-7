@@ -23,7 +23,7 @@
 
         <!-- Filter -->
         <div class="history-filters mb-4">
-            <form method="GET" action="{{ route('transactions.create') }}" class="d-flex gap-3">
+        <form method="GET" action="{{ route('transactions.history') }}" class="d-flex gap-3">
                 <div>
                     <label for="date" class="form-label">Tanggal</label>
                     <input type="date" name="date" id="date" class="form-control" value="{{ request('date') }}">
@@ -56,36 +56,43 @@
         <div class="card history-card">
             <div class="card-body">
                 <table class="table history-table">
-                    <thead>
-                        <tr>
-                            <th>ID Transaksi</th>
-                            <th>Nama Pelanggan</th>
-                            <th>Jenis Layanan</th>
-                            <th>Berat (kg)</th>
-                            <th>Harga</th>
-                            <th>Status</th>
-                            <th>Pembayaran</th>
-                            <th>Tanggal Selesai</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @forelse($transactions as $transaction)
-                            <tr>
-                                <td>{{ $transaction->transaction_id }}</td>
-                                <td>{{ $transaction->customer->name ?? '-' }}</td>
-                                <td>{{ ucfirst(str_replace('_', ' ', $transaction->service_type)) }}</td>
-                                <td>{{ $transaction->weight ?? '-' }}</td>
-                                <td>Rp {{ number_format($transaction->price, 0, ',', '.') }}</td>
-                                <td>{{ ucfirst(str_replace('_', ' ', $transaction->status)) }}</td>
-                                <td>{{ ucfirst(str_replace('_', ' ', $transaction->payment_status)) }}</td>
-                                <td>{{ $transaction->finished_at ? $transaction->finished_at->format('d M Y H:i') : '-' }}</td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="8" class="text-center">Tidak ada data transaksi.</td>
-                            </tr>
-                        @endforelse
-                    </tbody>
+                <thead>
+    <tr>
+        <th>ID Transaksi</th>
+        <th>Nama Pelanggan</th>
+        <th>Jenis Layanan</th>
+        <th>Berat (kg)</th>
+        <th>Harga</th>
+        <th>Status</th>
+        <th>Pembayaran</th>
+        <th>Tanggal Selesai</th>
+        <th>Aksi</th> <!-- Kolom baru -->
+    </tr>
+</thead>
+<tbody>
+    @forelse($transactions as $transaction)
+        <tr>
+            <td>{{ $transaction->transaction_id }}</td>
+            <td>{{ $transaction->customer->name ?? '-' }}</td>
+            <td>{{ ucfirst(str_replace('_', ' ', $transaction->service_type)) }}</td>
+            <td>{{ $transaction->weight ?? '-' }}</td>
+            <td>Rp {{ number_format($transaction->price, 0, ',', '.') }}</td>
+            <td>{{ ucfirst(str_replace('_', ' ', $transaction->status)) }}</td>
+            <td>{{ ucfirst(str_replace('_', ' ', $transaction->payment_status)) }}</td>
+            <td>{{ $transaction->finished_at ? $transaction->finished_at->format('d M Y H:i') : '-' }}</td>
+            <td> <!-- Tambahkan tombol di sini -->
+                <a href="{{ route('transactions.edit-status', $transaction->transaction_id) }}" class="btn btn-warning btn-sm">
+                    Edit Status
+                </a>
+            </td>
+        </tr>
+    @empty
+        <tr>
+            <td colspan="9" class="text-center">Tidak ada data transaksi.</td>
+        </tr>
+    @endforelse
+</tbody>
+
                 </table>
             </div>
         </div>

@@ -18,7 +18,28 @@ class User extends Authenticatable
     protected $primaryKey = 'user_id';  // Set primary key menjadi 'user_id'
 
     /**
-     * Mass assignable attributes.
+     * Indicates if the IDs are auto-incrementing.
+     *
+     * @var bool
+     */
+    public $incrementing = true; // Jika primary key bersifat auto-increment
+
+    /**
+     * The "type" of the auto-incrementing ID.
+     *
+     * @var string
+     */
+    protected $keyType = 'int'; // Tipe data dari primary key
+
+    /**
+     * Nama tabel (opsional jika nama tabel sesuai konvensi Laravel).
+     *
+     * @var string
+     */
+    protected $table = 'users'; // Pastikan nama tabel sesuai
+
+    /**
+     * Attributes yang dapat diisi secara massal.
      *
      * @var array<int, string>
      */
@@ -26,6 +47,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role', // Tambahkan 'role' jika digunakan untuk login
     ];
 
     /**
@@ -39,15 +61,12 @@ class User extends Authenticatable
     ];
 
     /**
-     * Attributes yang seharusnya di-cast.
+     * Attributes yang harus di-cast.
      *
-     * @return array<string, string>
+     * @var array<string, string>
      */
-    protected function casts(): array
-    {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
-    }
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed', // Laravel 10+ mendukung hashed password secara otomatis
+    ];
 }
