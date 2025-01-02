@@ -15,6 +15,7 @@ class Customer extends Model
         'name',
         'phone_number',
         'created_at',
+        'address',
     ];
 
     // Relasi ke model Transaction

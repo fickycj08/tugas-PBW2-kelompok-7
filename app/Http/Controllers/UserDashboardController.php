@@ -7,7 +7,7 @@ use App\Models\Transaction;
 use App\Models\User;
 
 class UserDashboardController extends Controller
-{
+{ 
     public function index()
     {
         $user = auth()->user();

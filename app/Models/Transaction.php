@@ -25,6 +25,8 @@ class Transaction extends Model
         'status',
         'unit_type',
         'payment_method',
+        'address', // Tambahkan ini
+        'rejection_reason', // Tambahkan ini
     ];
 
     /**
@@ -42,4 +44,9 @@ class Transaction extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+    public function voucher()
+{
+    return $this->belongsTo(Voucher::class, 'voucher_id', 'voucher_id');
+}
+
 }

@@ -488,6 +488,128 @@ input[type="password"] {
 }
 /*DASHBOARD END*/
 
+/*VOUCHER INDEX START*/
+/* Voucher Management Page Styles */
+
+/* Page Background */
+.voucher-bg {
+    background-color: #F4E8D4;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Page Title */
+.voucher-title {
+    color: #343a40;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.voucher-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.voucher-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.voucher-btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.voucher-btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Card Styles */
+.voucher-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Table */
+.voucher-table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.voucher-table th {
+    background-color: #C8B891;
+    color: white;
+    font-weight: bold;
+    padding: 12px 10px;
+}
+
+.voucher-table td {
+    padding: 10px 8px;
+    color: #555;
+}
+
+.voucher-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.voucher-table tr:hover {
+    background-color: #e9ecef;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Alert Styles */
+.voucher-alert {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .voucher-table td, 
+    .voucher-table th {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .voucher-title {
+        font-size: 1.5rem;
+    }
+
+    .voucher-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .voucher-btn-danger {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+/*VOUCHER INDEX END*/
+
 /*VOUCHER NEW START*/
 /* Form Container */
 .form-container {
@@ -738,6 +860,80 @@ h4.user-dashboard-title {
     font-weight: 700;
     
 }
+
+/* Tombol Aksi: Bayar Sekarang */
+.btn-warning {
+    color: #fff;
+    background-color: #ff9800;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-warning:hover {
+    background-color: #e68900;
+    transform: translateY(-2px);
+}
+
+/* Badge: Lunas */
+.badge.bg-success {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 6px 10px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Badge: Belum Dibayar */
+.badge.bg-danger {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 6px 10px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Tombol Aksi: Lihat Invoice */
+.btn-sm-invoice {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-sm-invoice:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Stat Cards */
+.stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Table */
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
 /*USER DASHBOARD END*/
 
 /*USER CREATE ORDER START*/
@@ -1231,3 +1427,528 @@ body.topup-page {
 }
 
 /* TOPUP USER PAGE END */
+
+
+/*USER PICKUP START*/
+/* Pickup Page Styles */
+body {
+    background-color: #F4E8D4;
+}
+.custom-navbar {
+    background-color: #C8B891;
+}
+
+/* Background Styling */
+.pickup-bg {
+    background-color: #F4E8D4;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Page Title */
+.pickup-title {
+    color: #343a40;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Card Styling */
+.pickup-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.pickup-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.pickup-table th {
+    background-color: #6C5A3B;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.pickup-table td {
+    text-align: center;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+/* Button Styling */
+.btn.pickup-accept {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.btn.pickup-accept:hover {
+    background-color: #218838;
+    color: white;
+}
+
+.btn.pickup-reject {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.btn.pickup-reject:hover {
+    background-color: #c82333;
+    color: white;
+}
+
+/* Badge Styling */
+.badge {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    color: white;
+}
+
+.bg-info {
+    background-color: #17a2b8;
+}
+
+.bg-success {
+    background-color: #28a745;
+}
+
+/* Modal Styling */
+.pickup-modal-header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+}
+
+.pickup-modal-footer {
+    background-color: #f8f9fa;
+    padding: 15px;
+}
+
+/* Empty Row Styling */
+.empty-row {
+    font-size: 1.2rem;
+    color: #6c757d;
+    text-align: center;
+}
+/*USER PICKUP END*/
+
+/*DATA PELANGGAN START*/
+/* Customer Page Styles */
+/* Background Styling */
+.customer-bg {
+    background-color: #F4E8D4;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Title Styling */
+.customer-title {
+    color: #343a40;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.customer-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.customer-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.customer-btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.customer-btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Card Styling */
+.customer-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Table */
+.customer-table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.customer-table th {
+    background-color: #C8B891;
+    color: white;
+    font-weight: bold;
+    padding: 12px 10px;
+}
+
+.customer-table td {
+    padding: 10px 8px;
+    color: #555;
+}
+
+.customer-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.customer-table tr:hover {
+    background-color: #e9ecef;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Alert Styles */
+.customer-alert {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    .customer-table td, 
+    .customer-table th {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .customer-title {
+        font-size: 1.5rem;
+    }
+
+    .customer-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .customer-btn-danger {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}
+
+/*DATA PELANGGAN END*/
+
+/*DATA PELANGGAN EDIT START*/
+/* Customer Edit Page */
+
+/* Background Styling */
+.customer-edit-bg {
+    background-color: #F4E8D4;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Title Styling */
+.customer-edit-title {
+    color: #343a40;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Card Styling */
+.customer-edit-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Alert */
+.customer-edit-alert {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/*DATA PELANGGAN EDIT END*/
+
+/*DATA CREATE PELANGGAN START*/
+/* Add Customer Page */
+
+/* Background Styling */
+.customer-create-bg {
+    background-color: #F4E8D4;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Title Styling */
+.customer-create-title {
+    color: #343a40;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Card Styling */
+.customer-create-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Alert */
+.customer-create-alert {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/*DATA CREATE PELANGGAN END*/
+
+/*DATA HISTORY START*/
+/* Background untuk halaman history */
+.history-bg {
+    background-color: #F4E8D4;
+}
+
+/* Judul halaman */
+.history-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 30px;
+}
+
+/* Tombol Kembali */
+.history-back-btn {
+    background-color: #6c757d;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.history-back-btn:hover {
+    background-color: #5a6268;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.history-back-btn i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+/* Card untuk tabel */
+.history-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabel */
+.history-table {
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.history-table th {
+    background-color: #B5A27F;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.history-table td {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #495057;
+    border-top: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+/* Filter Section */
+.history-filters .form-label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.history-filters .form-control,
+.history-filters .form-select {
+    border-radius: 8px;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+}
+
+.history-filter-btn {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.history-filter-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/*DATA HISTORY END*/
+
+/*DATA NEW TRANSAKSI ADMIN START*/
+/* Background khusus untuk halaman transaksi baru */
+.transaction-bg {
+    background-color: #F4E8D4;
+}
+
+/* Card styling */
+.transaction-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Judul halaman */
+.transaction-title {
+    font-weight: bold;
+    color: #6C757D;
+    margin-bottom: 20px;
+}
+
+/* Tombol kembali */
+.transaction-back-btn {
+    color: #6C757D;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.transaction-back-btn i {
+    margin-right: 5px;
+}
+
+/* Form Styling */
+.transaction-form .form-label {
+    font-weight: bold;
+    color: #6C757D;
+}
+
+.transaction-form .form-control, .transaction-form .form-select {
+    border-radius: 8px;
+}
+
+/* Tombol submit */
+.transaction-submit-btn {
+    background: #B5A27F;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.transaction-submit-btn:hover {
+    background: #8D734B;
+    color: #fff;
+}
+
+/*DATA NEW TRANSAKSI ADMIN END*/
